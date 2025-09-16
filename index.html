@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Desktop Navbar -->
+    <nav id="desktop-nav">
+      <div class="logo">Saurabh Kumar</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hamburger Navbar -->
+    <nav id="hamburger-nav">
+      <div class="logo">Saurabh Kumar</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/saurabh-profile.jpeg" alt="Saurabh Kumar profile picture" style="border-radius: 50%;" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Saurabh Kumar</h1>
+        <p class="section__text__p2">Data Analyst</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/SAURABH_K.pdf')">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+        </div>
+        <div id="socials-container">
+          <a href="https://www.linkedin.com/in/tskk/" target="_blank">
+            <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" />
+          </a>
+          <a href="https://github.com/saurabhksp" target="_blank">
+            <img src="./assets/github.png" alt="My Github profile" class="icon" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/vedpro.jpg" alt="Profile picture" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+              <h3>Experience</h3>
+              <p>Data Analytics</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
+              <h3>Education</h3>
+              <p>Information Technology</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Data Analyst with a passion for turning data into insights that drive results. Skilled in data visualization, analysis, and reporting using tools like Python, SQL, and Excel. Focused on delivering clear, actionable solutions to support business growth.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data Analytics</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Power BI</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Ms Excel</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Statistics</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/Screenshot (177).png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Customer Churn Analysis</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/vedanshshrivastava22/customer-churn-analysis-Dashboard'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.linkedin.com/in/vedansh-shrivastava-data-analyst/'">LinkedIn</button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/Screenshot (194).png" alt="Project 2" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Financial Performance Dashboard</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/vedanshshrivastava22/finance-project/tree/main'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.linkedin.com/in/vedansh-shrivastava-data-analyst/'">LinkedIn</button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/Screenshot (191).png" alt="Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Foreign Direct Investment Analysis</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/vedanshshrivastava22/FDI-projects/tree/main'">Github</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.linkedin.com/in/vedansh-shrivastava-data-analyst/'">LinkedIn</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:kumarsaurabh820@gmail.com">kumarsaurabh820@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/call-icon.webp" alt="Call icon" class="icon contact-icon" />
+          <p>7669997637</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Saurabh Kumar. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,404 @@
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f2f5; /* light grey background */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(70 66 66);
+}
+
+/* TRANSITION */
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  background-color: #ffffff; /* white navbar */
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+/* LOGO */
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+/* HAMBURGER OPEN ANIMATION */
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* MENU LINKS */
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 10;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.menu-links.open {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  padding: 0.75rem 2rem;
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+}
+
+.menu-links a:hover {
+  background-color: #f0f0f0;
+}
+
+/* SECTIONS */
+section {
+  padding: 4vh 10rem;
+  min-height: fit-content;
+  scroll-margin-top: 80px;
+}
+
+/* PROFILE SECTION */
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  background-color: #d9f0ff; /* light blue */
+}
+
+.section__pic-container {
+  width: 250px;
+  height: 250px;
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.section__text {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+/* SOCIAL ICONS */
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: 0.1rem solid rgb(53, 53, 53);
+}
+
+.btn-color-1 {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: 0.1rem solid rgb(255, 255, 255);
+}
+
+/* ABOUT SECTION */
+#about {
+  position: relative;
+  background-color: #fff8dc; /* light yellow */
+  padding: 4rem 10rem;
+}
+
+.about-containers {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.about-pic {
+  width: 250px;
+  height: auto;
+  border-radius: 2rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: aliceblue;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.1rem solid rgb(163, 163, 163);
+}
+
+/* EXPERIENCE SECTION */
+#experience {
+  position: relative;
+  background-color: #f0ffe0; /* light green */
+  padding: 4rem 10rem;
+}
+
+.experience-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+#projects {
+  position: relative;
+  background-color: #ffe6f0; /* light pink */
+  padding: 4rem 10rem;
+}
+
+.project-img {
+  width: 250px;
+  height: auto;
+  border-radius: 2rem;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT SECTION */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e6ff; /* light purple */
+  padding: 4rem 10rem;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(163, 163, 163);
+  background: aliceblue;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER */
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+  background-color: #dcdcdc;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #profile,
+  .section-container {
+    display: block;
+    text-align: center;
+  }
+  .section__pic-container,
+  .about-pic,
+  .project-img {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto 1rem;
+  }
+  section {
+    margin: 0 5%;
+    padding: 4rem 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .btn-container {
+    flex-wrap: wrap;
+  }
+}
