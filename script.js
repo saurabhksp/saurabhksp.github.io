@@ -21,3 +21,30 @@ document.addEventListener("click", (event) => {
     icon.classList.remove("open");
   }
 });
+
+// Smooth scroll function for arrow buttons
+function scrollToSection(sectionId) {
+  document.querySelector(sectionId).scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+// Initialize smooth scrolling for all navigation links
+document.addEventListener('DOMContentLoaded', function() {
+  // Add smooth scrolling to all anchor links
+  const links = document.querySelectorAll('a[href^="#"]');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});

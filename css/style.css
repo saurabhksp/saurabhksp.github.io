@@ -195,6 +195,18 @@ section {
   height: 2rem;
 }
 
+/* Arrow icon specific styling */
+.arrow {
+  display: block;
+  margin: 2rem auto 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: translateY(5px);
+}
+
 /* BUTTONS */
 .btn-container {
   display: flex;
@@ -233,19 +245,31 @@ section {
   border: 0.1rem solid rgb(255, 255, 255);
 }
 
-/* ABOUT SECTION */
+/* ABOUT SECTION - FIXED LAYOUT */
 #about {
   position: relative;
   background-color: #fff8dc; /* light yellow */
   padding: 4rem 10rem;
 }
 
+.section-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.about-details-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .about-containers {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 2rem 0;
+  justify-content: space-between;
 }
 
 .about-pic {
@@ -263,11 +287,30 @@ section {
   border: 0.1rem solid rgb(163, 163, 163);
 }
 
+.text-container {
+  padding: 1.5rem;
+  background: aliceblue;
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(163, 163, 163);
+}
+
 /* EXPERIENCE SECTION */
 #experience {
   position: relative;
   background-color: #f0ffe0; /* light green */
   padding: 4rem 10rem;
+}
+
+.section__text__p1 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+#experience .title,
+#projects .title {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .experience-details-container {
@@ -299,6 +342,12 @@ article .icon {
   position: relative;
   background-color: #ffe6f0; /* light pink */
   padding: 4rem 10rem;
+}
+
+#projects .section__text__p1 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-img {
@@ -388,6 +437,12 @@ footer p {
   section {
     margin: 0 5%;
     padding: 4rem 2rem;
+  }
+  
+  /* Mobile responsive for about section */
+  .about-containers {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
